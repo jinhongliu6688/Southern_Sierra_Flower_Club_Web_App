@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SSWC</title>
+    <link rel="shortcut icon" type="image/x-icon" href="flower.ico" />
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body id="body">
+
+<div id="view-login" style="display: none;">
+        <div class="box">
+        <h1>Please log in</h1>
+        <label>Username: </label><input type="text" placeholder="XxSQLordxX" id="uname-input">
+        <button onclick="login()">Log in</button>
+        </div>
+</div>
+
+<div id="view-main">
+
+    <div id="title" class="title">
+        <img class="_logo_" src="img/logo.jpg">
+        <h1 class="SWCC">Southern Sierra Wildflower Club</h1>
+    </div>
+
+    <div id="view-main-search" class="else">
+        <div class="header">
+            <label class="label">Search</label>
+            <input id="searchbar" onchange="populateFilteredResults()" class="search" type="text">
+            <button class="logout" onclick="logout()">Logout <span class="username">defaultuser</span></button>
+        </div>
+
+        <div class="content" id="flowersList"></div>
+    </div>
+
+    <div id="view-main-details" class="else">
+        <div class="header">
+            <button class="back" onclick="viewMain()">Back</button>
+            <div class="search"></div>
+            <button class="logout" onclick="logout()">Logout <span class="username">defaultuser</span></button>
+        </div>
+        <div class="details" id="details">
+
+        </div>
+        <div class="sightings">
+            <h1>Recent Sightings</h1>
+            <table id="sightings-list"></table>
+        </div>
+        <div id="add">
+        </div>
+    </div>
+</div>
+
+<script src="index.js"></script>
+</body>
+<html>
