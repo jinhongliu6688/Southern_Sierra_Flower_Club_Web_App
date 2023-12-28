@@ -1,6 +1,5 @@
 {
    "version": 2,
-   "name": "flower-club-web-app",
    "builds": [
       { "src": "server.js", "use": "@vercel/node" }
    ],
