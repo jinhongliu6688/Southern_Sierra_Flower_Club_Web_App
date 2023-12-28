@@ -53,7 +53,8 @@ app.post('/user', controller.registerUser);
 app.get('/user', controller.authenticateUser);
 
 app.all('/*', (req, res) => {
-    console.log("Failed to route " + req.pathname);
+    // console.log("Failed to route " + req.pathname);
+    console.log("Failed to route " + req.url);
     res.status(404).send("bish nothing here");
 });
 //starting the server
