@@ -1,15 +1,15 @@
 const fs = require('fs');
 const sqlite3 = require('sqlite3').verbose();
 
-// const db = new sqlite3.Database("flowers-2.db");
-// const userdb = new sqlite3.Database("users.db"); 
-const path = require('path');
+const db = new sqlite3.Database("flowers-2.db");
+const userdb = new sqlite3.Database("users.db"); 
+// const path = require('path');
 
-const dbPath = path.resolve(__dirname, 'flowers-2.db');
-const db = new sqlite3.Database(dbPath);
+// const dbPath = path.resolve(__dirname, 'flowers-2.db');
+// const db = new sqlite3.Database(dbPath);
 
-const userdbPath = path.resolve(__dirname, 'users.db');
-const userdb = new sqlite3.Database(userdbPath);
+// const userdbPath = path.resolve(__dirname, 'users.db');
+// const userdb = new sqlite3.Database(userdbPath);
 
 //initialize usersdb
 userdb.run("create table if not exists USERS (USERNAME varchar(30), constraint uniqueUname primary key (USERNAME))");
