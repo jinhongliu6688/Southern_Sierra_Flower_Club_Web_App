@@ -8,8 +8,8 @@ const app = express();
 
 const controller = require('./controller.js');
 
-// app.use(express.static('client'));
-app.use(`/.netlify/functions/api`, router);
+app.use(express.static('client'));
+// app.use(`/.netlify/functions/api`, router);
 
 /*
 
