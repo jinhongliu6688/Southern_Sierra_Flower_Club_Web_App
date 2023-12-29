@@ -1,3 +1,5 @@
+const functions = require('firebase-functions');
+
 const http = require('http'),
   url = require('url'),
   port = 8083;
@@ -6,7 +8,7 @@ const http = require('http'),
 const express = require('express');
 const app = express();
 
-const controller = require('./controller.js');
+const controller = require('../controller.js');
 
 app.use(express.static('client'));
 // app.use(`/.netlify/functions/api`, router);
@@ -65,3 +67,5 @@ app.listen(process.env.PORT || port, () => console.log(`Example app listening on
 require('dns').lookup(require('os').hostname(), function (err, add, fam) {
   console.log('addr: '+add);
 });
+
+exports.app = functions.https.onRequest(app);
