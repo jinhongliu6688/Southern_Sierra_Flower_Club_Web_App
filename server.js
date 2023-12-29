@@ -1,4 +1,4 @@
-const functions = require('firebase-functions');
+// const functions = require('firebase-functions');
 
 const http = require('http'),
   url = require('url'),
@@ -8,7 +8,7 @@ const http = require('http'),
 const express = require('express');
 const app = express();
 
-const controller = require('../controller.js');
+const controller = require('./controller.js');
 
 app.use(express.static('client'));
 // app.use(`/.netlify/functions/api`, router);
@@ -68,4 +68,4 @@ require('dns').lookup(require('os').hostname(), function (err, add, fam) {
   console.log('addr: '+add);
 });
 
-exports.app = functions.https.onRequest(app);
+// exports.app = functions.https.onRequest(app);
